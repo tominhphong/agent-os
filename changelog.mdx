@@ -13,6 +13,42 @@ Wiki này được xây và duy trì bởi team 4-agent (Brain + 3 workers). M�
 
 ---
 
+<Update label="2026-09-25" description="Đổi tên site 'Starter Kit' → 'Agent OS' + đồng bộ repo, kết nối Authoring MCP" tags={["maintenance", "rename", "github", "mcp"]}>
+## Đồng bộ tên dự án, site và repo
+
+**Scope:** site vẫn mang tên mẫu **"Starter Kit"** từ lúc tạo dự án. Đồng bộ lại tên ở cả 3 nơi. **Commit:** `8262d90`.
+
+| Nơi | Tên cũ | Tên mới |
+| --- | --- | --- |
+| Tên site (`documentation.json`) | Starter Kit | **Agent OS** |
+| Tên dự án trên Dashboard | Operating System for AI Agents | **Agent OS** |
+| Repo GitHub | `documentationai-wiki` | **`agent-os`** |
+
+**Giữ nguyên:** địa chỉ `antigravity-memory-palace.documentationai.com` (link cũ và connector Reader MCP đang dùng).
+
+**Đồng bộ cả 3 site:** Realtor Knowledge Base (repo `realtor-knowledge-base`), Realtor OS (repo `realtor-os`), Agent OS (repo `agent-os`). Các trang và file còn nhắc tên repo cũ (ví dụ `documentationai-wiki`) sẽ được cập nhật dần. GitHub tự chuyển hướng tên cũ nên không gãy link.
+
+### Authoring MCP
+
+Kết nối **Authoring MCP** (`https://api.documentation.ai/mcp`) làm connector trên claude.ai. Claude Cloud và Claude Code đọc, sửa và publish được cả 3 dự án. Mọi thay đổi đều ở dạng nháp cho tới khi Phong duyệt.
+
+**Lưu ý:** `update_site_config` của Authoring MCP ghi lại `documentation.json` theo format chuẩn 2-space (mở rộng các nhóm viết inline). Nội dung không đổi, chỉ đổi cách xuống dòng. Đây là ngoại lệ có chủ đích so với bài học ngày 25/4 "never round-trip JSON".
+
+</Update>
+
+---
+
+<Update label="2026-04-26" description="Dọn trang mẫu, gộp Help Center, giới thiệu hệ sinh thái 3 site" tags={["cleanup", "navigation", "ecosystem"]}>
+## Dọn dẹp và giới thiệu hệ sinh thái 3 site
+
+- **Xoá 12 trang mẫu Starter Kit** (`components/*`, `help-center/faq`, `help-center/guides`, `introduction`, `quickstart`). **Commit:** `72197b3`.
+- **Gộp Troubleshooting vào tab Agent OS**, bỏ trang `help-center.mdx` riêng. **Commit:** `d4eb90a`.
+- **Giới thiệu hệ sinh thái 3 site Documentation.AI cho mọi agent:** cập nhật `CLAUDE.md`, trang `agent-os-overview/introduction` và `knowledge-qa/documentation-mcp-usage`. **Commit:** `1dda717`.
+
+</Update>
+
+---
+
 <Update label="2026-04-25" description="Add phong-realtyapi MCP tool reference to knowledge-qa" tags={["mcp", "phong-realtyapi", "knowledge-qa", "tool-reference"]}>
 ## Phong RealtyAPI MCP — Tool Reference
 
